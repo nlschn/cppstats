@@ -1054,6 +1054,7 @@ def apply(folder, options):
     # filter annotations with less than 3 features
     afeatureitems = filter(lambda (a, (f, d, c)):
             c != [''], afeatures.items())
+    print("\n\n".join(list(map(lambda x : str(x), afeatureitems))))
     annotations = map(lambda (a, (flag, b, c)): flag, afeatureitems)
     annotations3andmore = filter(lambda a: len(a) > 2, annotations)
     annotations3andmore = uniqueItems(annotations3andmore)
